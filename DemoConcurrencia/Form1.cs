@@ -13,7 +13,7 @@ namespace DemoConcurrencia
         }
         private void btnIniciarSecuencial_Click(object sender, EventArgs e)
         {
-            ActualizarResultado("iniciando proceso secuencial...");
+            ActualizarResultado("iniciando proceso secuencial..=");
             for (int i = 0; i < 10; i++)
             {
                 Thread.Sleep(2000);
@@ -85,7 +85,7 @@ namespace DemoConcurrencia
                     ActualizarResultado("Tarea cancelada" +
                         ".");
                 }
-           
+
             });
 
         }
@@ -93,6 +93,11 @@ namespace DemoConcurrencia
         private void btnCancelarHilo_Click(object sender, EventArgs e)
         {
             _cts.Cancel();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

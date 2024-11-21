@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             splitContainer1 = new SplitContainer();
+            btnCancelarHilo = new Button();
             btnIniciarTarea = new Button();
             btnIniciarHilo = new Button();
             btnIniciarSecuencial = new Button();
             txtResultado = new TextBox();
-            btnCancelarHilo = new Button();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
@@ -59,6 +59,16 @@
             splitContainer1.Size = new Size(795, 442);
             splitContainer1.SplitterDistance = 265;
             splitContainer1.TabIndex = 0;
+            // 
+            // btnCancelarHilo
+            // 
+            btnCancelarHilo.Location = new Point(12, 246);
+            btnCancelarHilo.Name = "btnCancelarHilo";
+            btnCancelarHilo.Size = new Size(235, 35);
+            btnCancelarHilo.TabIndex = 3;
+            btnCancelarHilo.Text = "Cancelar Hilo";
+            btnCancelarHilo.UseVisualStyleBackColor = true;
+            btnCancelarHilo.Click += btnCancelarHilo_Click;
             // 
             // btnIniciarTarea
             // 
@@ -102,16 +112,6 @@
             txtResultado.Size = new Size(526, 442);
             txtResultado.TabIndex = 0;
             // 
-            // btnCancelarHilo
-            // 
-            btnCancelarHilo.Location = new Point(12, 246);
-            btnCancelarHilo.Name = "btnCancelarHilo";
-            btnCancelarHilo.Size = new Size(235, 35);
-            btnCancelarHilo.TabIndex = 3;
-            btnCancelarHilo.Text = "Cancelar Hilo";
-            btnCancelarHilo.UseVisualStyleBackColor = true;
-            btnCancelarHilo.Click += btnCancelarHilo_Click;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -120,6 +120,7 @@
             Controls.Add(splitContainer1);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel2.ResumeLayout(false);
             splitContainer1.Panel2.PerformLayout();
